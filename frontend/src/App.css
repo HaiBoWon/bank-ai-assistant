@@ -1,0 +1,298 @@
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ChatUI 样式覆盖 */
+.Chat {
+  height: 100%;
+}
+
+.Navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Navbar-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.Message {
+  margin-bottom: 16px;
+}
+
+.Bubble {
+  max-width: 75%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.Bubble-user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+
+.Bubble-bot {
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 18px 18px 18px 4px;
+}
+
+.Composer {
+  border-top: 1px solid #e0e0e0;
+  background: white;
+}
+
+.Composer-input {
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.Composer-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+/* 重置Composer组件的默认样式 */
+.app-container .Composer {
+  border-top: 1px solid #e0e0e0 !important;
+  background: white !important;
+  padding: 12px 16px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* 简化的输入框容器 */
+.app-container .Composer-inputWrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #f5f5f5 !important;
+  border-radius: 24px !important;
+  padding: 4px 8px 4px 16px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.app-container .Composer-actions{
+  height: 48px;
+}
+
+/* 简化的输入框 */
+.app-container .Composer-input {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 12px 0 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  background: transparent !important;
+  resize: none !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  flex: 1 1 auto !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* 简化的发送按钮 */
+.app-container .Composer-sendBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 10px !important;
+  width: 44px !important;
+  height: 56px !important;
+  min-width: 44px !important;
+  min-height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+/* 添加发送图标 */
+.app-container .Composer-sendBtn::before {
+  content: '' !important;
+  position: absolute !important;
+  width: 20px !important;
+  height: 20px !important;
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2L11 13'/%3E%3Cpath d='M22 2L15 22L11 13L2 9L22 2Z'/%3E%3C/svg%3E") !important; */
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* 隐藏默认文本 */
+.app-container .Composer-sendBtn span {
+  display: none !important;
+}
+
+/* 交互效果 */
+.app-container .Composer-sendBtn:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.5) !important;
+}
+
+.app-container .Composer-sendBtn:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.3) !important;
+}
+
+.app-container .Composer-sendBtn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.app-container .Composer-inputWrap:focus-within {
+  background: white !important;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1) !important;
+}
+
+.app-container .Composer-input {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 12px 0 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  background: transparent !important;
+  resize: none !important;
+  max-height: 120px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  flex: 1 !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+.app-container .Composer-input:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.Typing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+}
+
+.Typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #999;
+  animation: typing 1.4s infinite;
+}
+
+.Typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.Typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* 自定义Composer样式 */
+.app-container .Chat {
+  height: 100%;
+}
+
+.custom-composer {
+  border-top: 1px solid #e0e0e0;
+  background: white;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.custom-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f5;
+  border-radius: 24px;
+  padding: 4px 8px 4px 16px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-input {
+  border: none !important;
+  outline: none !important;
+  resize: none !important;
+  background: transparent !important;
+  flex: 1 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 12px 0 !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+.custom-send-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-send-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.5);
+}
+
+.custom-send-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.3);
+}
+
+.custom-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .Bubble {
+    max-width: 85%;
+  }
+}
+
+
